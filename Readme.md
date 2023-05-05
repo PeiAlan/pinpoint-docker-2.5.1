@@ -186,3 +186,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ```
 
+sed -i 's/localhost:19092/pinpoint-kafka:9092/g' uriStatTable.json tagTable.json doubleTable.json dataTypeTable.json &&
+sed -i 's/.*replicasPerPartition.*/    \"replicasPerPartition\": \"1\",/g' uriStatTable.json tagTable.json doubleTable.json dataTypeTable.json &&
+      
