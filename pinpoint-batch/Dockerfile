@@ -10,10 +10,10 @@ RUN mkdir -p /pinpoint/config \
 
 COPY /build/config/pinpoint-batch.properties /pinpoint/config/
 COPY /build/scripts/start-batch.sh /pinpoint/scripts/
+COPY /build/pinpoint-batch-${PINPOINT_VERSION}.jar /pinpoint/pinpoint-batch.jar
 
 RUN apt-get update && apt-get install --no-install-recommends -y curl && apt-get clean \
     && chmod a+x /pinpoint/scripts/start-batch.sh \
     && chmod a+x /pinpoint/config/pinpoint-batch.properties \
-    && curl -SL ${INSTALL_URL} -o /pinpoint/pinpoint-batch.jar
 
 ENTRYPOINT ["sh", "/pinpoint/scripts/start-batch.sh"]

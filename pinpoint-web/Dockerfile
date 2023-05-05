@@ -1,8 +1,8 @@
 FROM openjdk:11.0.16-jre-slim-buster
 
 ARG PINPOINT_VERSION=${PINPOINT_VERSION:-2.5.1}
-#ARG INSTALL_URL=https://github.com/pinpoint-apm/pinpoint/releases/download/v${PINPOINT_VERSION}/pinpoint-web-boot-${PINPOINT_VERSION}.jar
-ARG INSTALL_URL=/root/pinpoint-docker-2.5.1/pinpoint-web/build/pinpoint-web-boot-${PINPOINT_VERSION}.jar
+ARG INSTALL_URL=https://github.com/pinpoint-apm/pinpoint/releases/download/v${PINPOINT_VERSION}/pinpoint-web-boot-${PINPOINT_VERSION}.jar
+#ARG INSTALL_URL=/root/pinpoint-docker-2.5.1/pinpoint-web/build/pinpoint-web-boot-${PINPOINT_VERSION}.jar
 
 
 RUN mkdir -p /pinpoint/config \
